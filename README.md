@@ -2,6 +2,28 @@
 
 **LoadOut** is lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
+## Pre-requisites
+
+**Enable Firebase Authentication**
+1. Go to the [LoadOut Console](https://console.firebase.google.com/u/0/project/loadout-project-id/overview).
+2. Navigate to **Project Settings** (gear icon next to Project Overview).
+3. Scroll down to **Your apps** section.
+4. Click **Download** `google-services.json`
+5. Save the file to `app/` directory of the project.
+    ```
+    LoadOut/
+        ├─ .gradle/
+        ├─ .idea/
+        └─ app/
+            ├─ build/
+            ├─ src/
+            ├─ .gitignore
+            ├─ build.gradle.kts
+            ├─ google-services.json  <--- Place the file here
+            └─ proguard-rules.pro
+    ```
+6. Sync, build, and run the project.
+
 ## Project Structure
 
 ```
@@ -19,34 +41,35 @@ app/
  │   │   │       │   └─ datasource/         # APIs, DAOs, Firebase adapters
  │   │   │       │
  │   │   │       ├─ view/                # UI (Activities, Fragments, Adapters, XML links)
- │   │   │       │   ├─ login/
- │   │   │       │   │   └─ LoginActivity.kt
+ │   │   │       │   ├─ auth/
+ │   │   │       │   │   ├─ LoginActivity.kt
+ │   │   │       │   │   └─ RegisterActivity.kt
  │   │   │       │   └─ dashboard/
  │   │   │       │       └─ DashboardActivity.kt
  │   │   │       │
  │   │   │       ├─ presenter/           # Presenters
- │   │   │       │   ├─ login/           
- │   │   │       │   │   └─ LoginPresenter.kt
+ │   │   │       │   ├─ auth/           
+ │   │   │       │   │   ├─ LoginPresenter.kt
+ │   │   │       │   │   └─ RegisterPresenter.kt
  │   │   │       │   └─ dashboard/
  │   │   │       │       └─ DashboardPresenter.kt
  │   │   │       │
  │   │   │       └─ contract/            # View <-> Presenter
- │   │   │           ├─ LoginContract.kt
- │   │   │           └─ DashboardContract.kt
+ │   │   │           ├─ auth/           
+ │   │   │           │   ├─ LoginContract.kt
+ │   │   │           │   └─ RegisterContract.kt
+ │   │   │           └─ dashboard/
+ │   │   │               └─ DashboardContract.kt
  │   │   │
  │   │   └─ res/
  │   │       ├─ layout/
- │   │       │   ├─ activity_login.xml
  │   │       │   └─ activity_dashboard.xml
  │   │       └─ values/
- │   │           ├─ strings.xml
- │   │           ├─ colors.xml
- │   │           └─ styles.xml
  │   │
  │   └─ AndroidManifest.xml
 ```
 
-## Current Dependencies
+### Current Dependencies
 
 | Dependency | Version | Description |
 |------------|---------|-------------|
@@ -61,7 +84,7 @@ app/
 | **work-runtime-ktx** | 2.8.1 | WorkManager for scheduling background tasks (e.g., syncing data) |
 | **dagger-compiler** | 2.51.1 | Dependency Injection compiler for Dagger (manages app components) |
 
-## Plugins
+### Plugins
 
 | Plugin | Version | Description |
 |--------|---------|-------------|

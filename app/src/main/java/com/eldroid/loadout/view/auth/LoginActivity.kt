@@ -1,4 +1,4 @@
-package com.eldroid.loadout.view.auth.login
+package com.eldroid.loadout.view.auth
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,9 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.eldroid.loadout.contract.auth.LoginContract
 import com.eldroid.loadout.databinding.ActivityLoginBinding
 import com.eldroid.loadout.model.repository.AuthRepository
-import com.eldroid.loadout.presenter.auth.login.LoginPresenter
+import com.eldroid.loadout.presenter.auth.LoginPresenter
 import com.eldroid.loadout.view.dashboard.DashboardActivity
-import com.eldroid.loadout.view.auth.register.RegisterActivity
 
 class LoginActivity : AppCompatActivity(), LoginContract.View {
     private lateinit var binding: ActivityLoginBinding

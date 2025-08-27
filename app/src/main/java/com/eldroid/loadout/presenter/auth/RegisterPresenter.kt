@@ -1,4 +1,4 @@
-package com.eldroid.loadout.presenter.auth.register
+package com.eldroid.loadout.presenter.auth
 
 import com.eldroid.loadout.contract.auth.RegisterContract
 import com.eldroid.loadout.model.repository.AuthRepository

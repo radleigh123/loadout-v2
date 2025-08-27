@@ -1,4 +1,4 @@
-package com.eldroid.loadout.view.auth.register
+package com.eldroid.loadout.view.auth
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,8 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.eldroid.loadout.contract.auth.RegisterContract
 import com.eldroid.loadout.databinding.ActivityRegisterBinding
 import com.eldroid.loadout.model.repository.AuthRepository
-import com.eldroid.loadout.presenter.auth.register.RegisterPresenter
-import com.eldroid.loadout.view.auth.login.LoginActivity
+import com.eldroid.loadout.presenter.auth.RegisterPresenter
 
 class RegisterActivity : AppCompatActivity(), RegisterContract.View {
     private lateinit var binding: ActivityRegisterBinding
