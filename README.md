@@ -4,6 +4,8 @@
 
 ## Pre-requisites
 
+Android Studio: Iguana 2023.2.1 Patch 2
+
 **Enable Firebase Authentication**
 1. Go to the [LoadOut Console](https://console.firebase.google.com/u/0/project/loadout-project-id/overview).
 2. Navigate to **Project Settings** (gear icon next to Project Overview).
@@ -90,4 +92,3 @@ app/
 |--------|---------|-------------|
 | **google-services** | latest | Integrates Firebase services with the Android app |
 | **devtools-ksp** | 1.9.0-1.0.13 | Kotlin Symbol Processing (KSP) used for Room & Dagger annotation processing |
-
