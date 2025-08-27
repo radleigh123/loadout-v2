@@ -2,6 +2,50 @@
 
 **LoadOut** is lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
+## Project Structure
+
+```
+app/
+ ├─ build/
+ ├─ src/
+ │   ├─ androidTest/                 
+ │   ├─ test/                        
+ │   ├─ main/
+ │   │   ├─ java/
+ │   │   │   └─ com.eldroid.loadout/
+ │   │   │       ├─ model/               # Data & business logic
+ │   │   │       │   ├─ entities/           # Data classes (User, TrashBin, Notification)
+ │   │   │       │   ├─ repository/         # Data access (Firebase, Retrofit, Room, etc.)
+ │   │   │       │   └─ datasource/         # APIs, DAOs, Firebase adapters
+ │   │   │       │
+ │   │   │       ├─ view/                # UI (Activities, Fragments, Adapters, XML links)
+ │   │   │       │   ├─ login/
+ │   │   │       │   │   └─ LoginActivity.kt
+ │   │   │       │   └─ dashboard/
+ │   │   │       │       └─ DashboardActivity.kt
+ │   │   │       │
+ │   │   │       ├─ presenter/           # Presenters
+ │   │   │       │   ├─ login/           
+ │   │   │       │   │   └─ LoginPresenter.kt
+ │   │   │       │   └─ dashboard/
+ │   │   │       │       └─ DashboardPresenter.kt
+ │   │   │       │
+ │   │   │       └─ contract/            # View <-> Presenter
+ │   │   │           ├─ LoginContract.kt
+ │   │   │           └─ DashboardContract.kt
+ │   │   │
+ │   │   └─ res/
+ │   │       ├─ layout/
+ │   │       │   ├─ activity_login.xml
+ │   │       │   └─ activity_dashboard.xml
+ │   │       └─ values/
+ │   │           ├─ strings.xml
+ │   │           ├─ colors.xml
+ │   │           └─ styles.xml
+ │   │
+ │   └─ AndroidManifest.xml
+```
+
 ## Current Dependencies
 
 | Dependency | Version | Description |
@@ -23,19 +67,4 @@
 |--------|---------|-------------|
 | **google-services** | latest | Integrates Firebase services with the Android app |
 | **devtools-ksp** | 1.9.0-1.0.13 | Kotlin Symbol Processing (KSP) used for Room & Dagger annotation processing |
-
-## Setup & Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/loadout.git
-   cd loadout
-
----
-
-## Configs: 
-
-- **Java:** 17
-- **API level:** 34
-- **Android Gradle Plugin (AGP):** 8.3.2
 
