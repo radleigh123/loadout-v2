@@ -2,4 +2,22 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- New colors for modern login -->
+    <color name="gradient_start">#EFF9F0</color>
+    <color name="gradient_middle">#FF44A08D</color>
+    <color name="gradient_end">#006C67</color>
+    <color name="input_background">#33FFFFFF</color>
+    <color name="input_stroke">#66FFFFFF</color>
+    <color name="input_hint">#CCFFFFFF</color>
+    <color name="button_background">#FF1A5B5B</color>
+
+    <!-- Register screen colors -->
+    <color name="register_background">#FFF8F9FA</color>
+    <color name="register_title">#FF2D3748</color>
+    <color name="register_subtitle">#FF718096</color>
+    <color name="register_button">#FF2D5A5A</color>
+    <color name="input_border">#FF4ECDC4</color>
+    <color name="input_text_dark">#FF2D3748</color>
+    <color name="input_hint_dark">#FF9CA3AF</color>
 </resources>

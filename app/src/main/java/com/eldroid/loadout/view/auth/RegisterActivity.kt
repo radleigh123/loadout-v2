@@ -22,7 +22,7 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
     private lateinit var emailInput: EditText
     private lateinit var passwordInput: EditText
     private lateinit var confirmPasswordInput: EditText
-    private lateinit var checkBox: CheckBox
+//    private lateinit var checkBox: CheckBox
     private lateinit var progressBar: ProgressBar
     private lateinit var registerButton: Button
     private lateinit var loginLink: TextView
@@ -36,7 +36,7 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
         emailInput = binding.emailEt
         passwordInput = binding.passEt
         confirmPasswordInput = binding.pass2Et
-        checkBox = binding.checkboxMeat
+//        checkBox = binding.checkboxMeat
         registerButton = binding.registerBtn
         progressBar = binding.progressBar
         loginLink = binding.loginLinkTv
@@ -54,7 +54,7 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
             val email = emailInput.text.toString().trim()
             val password = passwordInput.text.toString().trim()
             val confirmPassword = confirmPasswordInput.text.toString().trim()
-            val isChecked = checkBox.isChecked
+//            val isChecked = checkBox.isChecked
 
             if (firstName.isEmpty()) {
                 firstNameInput.error = "First name is required"
@@ -92,11 +92,11 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
                 return@setOnClickListener
             }
 
-            if (!isChecked) {
-                checkBox.error = "You must agree to the terms"
-                checkBox.requestFocus()
-                return@setOnClickListener
-            }
+//            if (!isChecked) {
+//                checkBox.error = "You must agree to the terms"
+//                checkBox.requestFocus()
+//                return@setOnClickListener
+//            }
 
             presenter.register(email, password)
         }
