@@ -27,8 +27,8 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        emailInput = binding.emailEt
-        passwordInput = binding.passEt
+        emailInput = binding.emailEt.editText!!
+        passwordInput = binding.passEt.editText!!
         loginButton = binding.loginBtn
         registerLink = binding.registerLinkTv
         progressBar = binding.progressBar
